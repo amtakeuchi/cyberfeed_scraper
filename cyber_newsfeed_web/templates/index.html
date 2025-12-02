@@ -60,4 +60,69 @@
                     <p>No articles found for your keywords.</p>
                 {% endif %}
             </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to dark
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            body.classList.remove('bg-dark', 'text-light');
+            body.classList.add('bg-light', 'text-dark');
+            themeToggle.textContent = 'Toggle Dark Mode';
+        }
+        
+        themeToggle.addEventListener('click', function() {
+            if (body.classList.contains('bg-dark')) {
+                // Switch to light mode
+                body.classList.remove('bg-dark', 'text-light');
+                body.classList.add('bg-light', 'text-dark');
+                themeToggle.textContent = 'Toggle Dark Mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                // Switch to dark mode
+                body.classList.remove('bg-light', 'text-dark');
+                body.classList.add('bg-dark', 'text-light');
+                themeToggle.textContent = 'Toggle Light Mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Search functionality
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+        const searchType = document.getElementById('searchType');
+        const articles = document.querySelectorAll('.article-item');
+        
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = searchInput.value.toLowerCase();
+            const type = searchType.value;
             
+            articles.forEach(article => {
+                const title = article.querySelector('h4 a').textContent.toLowerCase();
+                const content = article.querySelector('.article-content').textContent.toLowerCase();
+                
+                let matches = false;
+                if (type === 'title') {
+                    matches = title.includes(searchTerm);
+                } else if (type === 'content') {
+                    matches = content.includes(searchTerm);
+                } else { // both
+                    matches = title.includes(searchTerm) || content.includes(searchTerm);
+                }
+                
+                if (matches || searchTerm === '') {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
