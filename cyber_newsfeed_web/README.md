@@ -2,7 +2,7 @@
 
 A Flask web application that aggregates and surfaces the latest headlines and alerts from across the cybersecurity, finance, cryptocurrency, geopolitics, crime, and world news ecosystems. This serves as a centralized dashboard for monitoring breaking news, active cyber threats, financial market movements, and geopolitical events relevant to incident response, penetration testing, cloud infrastructure security, and strategic risk monitoring.
 
-## 🎯 What It Does
+## What It Does
 
 - **Aggregates and filters content** from multiple public RSS feeds
 - **Surfaces high-priority articles** containing keywords relevant to cybersecurity operations, financial risk, and geopolitical intelligence
@@ -10,7 +10,7 @@ A Flask web application that aggregates and surfaces the latest headlines and al
 - **Keyword-based filtering** tailored for cybersecurity professionals, SOC analysts, and risk managers
 - **Category organization** to group articles by domain (Cybersecurity, Finance, Crypto, World News, Geopolitics, Defense)
 
-## ✨ Features
+## Features
 
 - **Web-based dashboard** with clean, modern UI
 - **Dark/Light theme toggle** with preference persistence
@@ -19,7 +19,7 @@ A Flask web application that aggregates and surfaces the latest headlines and al
 - **Real-time feed aggregation** from 20+ trusted sources
 - **Keyword filtering** for relevant threat intelligence
 
-## 🔧 Technologies
+## Technologies
 
 - **Python 3.12+**
 - **Flask** - Web framework for routing and rendering
@@ -28,7 +28,7 @@ A Flask web application that aggregates and surfaces the latest headlines and al
 - **Bootstrap 5** - Frontend framework
 - **JavaScript** - Client-side interactivity
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -65,7 +65,7 @@ A Flask web application that aggregates and surfaces the latest headlines and al
      pip install --user -r requirements.txt
      ```
 
-## 🚀 Usage
+## Usage
 
 ### Running the Application
 
@@ -90,14 +90,14 @@ A Flask web application that aggregates and surfaces the latest headlines and al
 - **View Articles:** Click on any article title to open it in a new tab
 - **Browse by Category:** Articles are automatically categorized by source domain
 
-## 📊 Example Use Cases
+## Example Use Cases
 
 - **Spotting new zero-day exploits** or nation-state attack attributions within minutes of publication
 - **Monitoring financial markets** for events linked to cybercrime (crypto laundering, stock market DDoS schemes)
 - **Tracking law enforcement actions** and major cybercrime arrests via press releases
 - **Watching geopolitical conflicts** and their potential impact on cloud services and infrastructure
 
-## 🔍 Configured Sources
+## Configured Sources
 
 The application monitors feeds from:
 
@@ -105,7 +105,7 @@ The application monitors feeds from:
 - **Crypto/Finance:** CoinTelegraph, CoinDesk, Bitcoinist, NewsBTC, CryptoPotato, DailyHODL, Investing.com
 - **World News:** BBC News, Al Jazeera, UN News, Defense News
 
-## 🎨 Customization
+## Customization
 
 ### Adding New Feeds
 
@@ -126,7 +126,7 @@ keywords = [
 ]
 ```
 
-## 📝 Project Structure
+## Project Structure
 
 ```
 cyber_newsfeed_web/
@@ -139,7 +139,7 @@ cyber_newsfeed_web/
 └── README.md          # This file
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 - **ModuleNotFoundError:** Make sure all dependencies are installed: `pip install -r requirements.txt`
 - **Port already in use:** If port 5000 is busy, modify `app.py` to use a different port:
@@ -148,7 +148,7 @@ cyber_newsfeed_web/
   ```
 - **Feed fetch errors:** Some feeds may be temporarily unavailable. The app will continue with available feeds.
 
-## 🔮 Future Improvements
+## Future Improvements (Maybe?)
 
 - Redis-backed persistent caching
 - Email alerting or webhook-based notifications
@@ -157,14 +157,15 @@ cyber_newsfeed_web/
 - User authentication and personalized feeds
 - Scheduled background updates
 
-## 📄 License
+## License
 
 This project is for personal use and educational purposes.
 
-## 👤 Author
+## Author
 
+Adam. 
 Built for daily monitoring of global developments affecting cloud infrastructure security, cyber incident readiness, financial risk assessment, and geopolitical threat mapping.
 
 ---
 
-**Note:** This is a development server. For production deployment, use a production WSGI server like Gunicorn or uWSGI.
+**Note:** This is a development server, intended to be for personal local use.
